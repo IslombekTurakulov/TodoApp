@@ -1,4 +1,4 @@
-package com.iuturakulov.todoapp
+package com.iuturakulov.todoapp.ui.activities
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar

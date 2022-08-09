@@ -1,11 +1,9 @@
-package com.iuturakulov.todoapp
+package com.iuturakulov.todoapp.model
 
 data class TodoItem(
     val id: String,
     val title: String,
     val taskPriority: TaskPriority,
-    val deadline: String? = null,
     val isDone: Boolean,
-    val created: String,
-    val updated: String? = null
+    val timeTodo: TimeTodo
 )

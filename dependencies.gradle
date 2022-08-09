@@ -1,0 +1,38 @@
+ext.versions = [
+        minSdk               : 24,
+        compileSdk           : 32,
+        versionCode          : 1,
+        versionName          : '1.0.0',
+
+        gradleBuildTool      : '7.2.1',
+        // support library
+        materialVersion      : '1.6.0',
+
+        // architecture components
+        fragmentVersion      : '1.2.5',
+        lifecycleVersion     : '2.4.0',
+        roomVersion          : '2.4.0',
+        archCompomentVersion : '2.1.0',
+
+        // di
+        hiltCoreVersion      : '2.40.5',
+        hiltVersion          : '1.0.0',
+
+        // network
+        retrofitVersion      : '2.9.0',
+        sandwichVersion      : '1.2.2',
+        okhttpVersion        : '4.7.2',
+
+        // moshi
+        moshiVersion         : '1.12.0',
+
+        // coroutines
+        coroutinesVersion    : '1.6.0',
+
+        // glide
+        glideVersion         : '4.12.0',
+        glidePaletteVersion  : '2.1.2',
+
+        // debugging
+        timberVersion        : '5.0.1',
+]
