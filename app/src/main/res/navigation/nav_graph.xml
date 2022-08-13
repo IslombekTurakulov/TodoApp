@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/explore_fragment">
+
+    <fragment
+        android:id="@+id/explore_fragment"
+        android:name="com.iuturakulov.todoapp.ui.fragments.ExploreTasksFragment"
+        android:label="@string/explore_fragment_label"
+        tools:layout="@layout/fragment_explore_tasks">
+
+        <action
+            android:id="@+id/action_ExploreFragment_to_SearchFragment"
+            app:destination="@id/search_fragment" />
+        <action
+            android:id="@+id/action_ExploreFragment_to_AddFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_ExploreFragment_to_DetailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/search_fragment"
+        android:name="com.iuturakulov.todoapp.ui.fragments.SearchTaskFragment"
+        android:label="@string/search_fragment_label"
+        tools:layout="@layout/fragment_search_task">
+
+        <action
+            android:id="@+id/action_SearchFragment_to_DetailsFragment"
+            app:destination="@id/detailsFragment"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.iuturakulov.todoapp.ui.fragments.AddTaskFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add_task">
+
+        <action
+            android:id="@+id/action_AddFragment_to_ExploreFragment"
+            app:destination="@id/explore_fragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.iuturakulov.todoapp.ui.fragments.DetailsTaskFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details_task">
+
+        <argument
+            android:name="taskId"
+            app:argType="long"
+            app:nullable="false"/>
+
+    </fragment>
+</navigation>

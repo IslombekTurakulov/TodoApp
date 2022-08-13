@@ -1,22 +1,24 @@
 package com.iuturakulov.todoapp.ui.activities
 
-import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import androidx.core.view.WindowCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.iuturakulov.todoapp.databinding.ActivityAddTaskBinding
+import com.google.android.material.snackbar.Snackbar
+import com.iuturakulov.todoapp.R
+import com.iuturakulov.todoapp.databinding.ActivityMainBinding
 
-class AddTaskActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityAddTaskBinding
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         super.onCreate(savedInstanceState)
-        binding = ActivityAddTaskBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
 }

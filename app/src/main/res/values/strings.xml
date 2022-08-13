@@ -45,4 +45,56 @@
     </string>
     <string name="title_activity_task_info">TaskInfoActivity</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="app_name">ToDoApp</string>
+    <string name="action_search">Search</string>
+    <string name="action_notifications">Notifications</string>
+    <string name="placeholder_in_development">In development</string>
+    <string name="explore_fragment_all_tasks">All tasks</string>
+    <string name="explore_fragment_overdue_tasks">Overdue</string>
+    <string name="explore_fragment_task_deleted">Task deleted</string>
+    <string name="explore_fragment_task_undo">Undo</string>
+    <string name="explore_fragment_filter_date">Date</string>
+    <string name="explore_fragment_toolbar_title">Tasks</string>
+    <string name="add_fragment_enter_title">Enter the title</string>
+    <string name="add_fragment_enter_description">Enter the description</string>
+    <string name="add_fragment_new_task">New task</string>
+    <string name="add_fragment_today">Today</string>
+    <string name="add_fragment_error_title_empty">The title cannot be empty</string>
+    <string name="add_fragment_error_title_not_unique">The title must be unique</string>
+    <string name="add_fragment_creating_task">Creating a task</string>
+    <string name="add_fragment_error_description">The description cannot be empty</string>
+    <string name="add_fragment_error_db">Failed to add entry</string>
+    <string name="add_fragment_date_specify">Specify the date</string>
+    <string name="add_fragment_date_picker_title">Select date</string>
+    <string name="add_fragment_time_picker_title">Select time</string>
+    <string name="add_fragment_error_invalid_date">Invalid date</string>
+    <string name="search_fragment_nothing_found">Nothing found</string>
+    <string name="search_fragment_error_search">Search error</string>
+    <string name="search_fragment_enter_something">Enter something</string>
+    <string name="details_fragment_error_task_loading">Task loading error</string>
+    <string name="details_fragment_task">Task</string>
+    <string name="details_fragment_dialog_title">Unable to save the task</string>
+    <string name="details_fragment_dialog_message">Exit without saving?</string>
+    <string name="details_fragment_dialog_button_negative">To stay</string>
+    <string name="details_fragment_dialog_button_positive">Exit without saving</string>
+    <string name="details_fragment_error_db">Failed to re-record</string>
+    <string name="details_fragment_menu_delete">Delete a task</string>
+    <string name="details_fragment_dialog_delete_title">Deleting a task</string>
+    <string name="details_fragment_dialog_delete_message">After deleting, it will be impossible to restore the task. Delete a task?</string>
+    <string name="details_fragment_dialog_delete_negative_button">Do not delete</string>
+    <string name="details_fragment_dialog_delete_positive_button">Delete a task</string>
+    <string name="details_fragment_error_delete">Failed to delete the task</string>
+    <string name="details_fragment_button_done">Mark Completed</string>
+    <string name="details_fragment_button_not_done">Mark as incomplete</string>
+    <string name="details_fragment_category_personal">Personal</string>
+    <string name="details_fragment_category_business">Business</string>
+    <string name="details_fragment_category_education">Education</string>
+    <string name="details_fragment_category_science">Science</string>
+    <string name="shared_element">sharedElement_</string>
+    <string name="notification_title">ToDoApp</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="explore_fragment_label">Explore Fragment</string>
+    <string name="search_fragment_label">Search Fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
