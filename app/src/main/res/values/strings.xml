@@ -45,7 +45,6 @@
     </string>
     <string name="title_activity_task_info">TaskInfoActivity</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="app_name">ToDoApp</string>
     <string name="action_search">Search</string>
     <string name="action_notifications">Notifications</string>
     <string name="placeholder_in_development">In development</string>
@@ -97,4 +96,5 @@
     <string name="search_fragment_label">Search Fragment</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_title_delete_task">Delete</string>
 </resources>
