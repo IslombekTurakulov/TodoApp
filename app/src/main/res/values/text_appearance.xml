@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.Medium" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextAppearance.Regular" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="TextAppearance.LargeTitle" parent="TextAppearance.Medium">
+        <item name="android:textSize">@dimen/_32ssp</item>
+        <item name="android:lineSpacingExtra">@dimen/_6ssp</item>
+    </style>
+
+    <style name="TextAppearance.Title" parent="TextAppearance.Medium">
+        <item name="android:textSize">@dimen/_20ssp</item>
+        <item name="android:lineSpacingExtra">@dimen/_12ssp</item>
+    </style>
+
+    <style name="TextAppearance.Button" parent="TextAppearance.Medium">
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:lineSpacingExtra">@dimen/_12ssp</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+
+    <style name="TextAppearance.Delete" parent="TextAppearance.Medium">
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:lineSpacingExtra">@dimen/_12ssp</item>
+        <item name="android:textColor">?errorTextColor</item>
+    </style>
+</resources>

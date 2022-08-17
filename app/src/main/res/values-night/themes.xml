@@ -3,5 +3,16 @@
     <style name="Base.Theme.TodoApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="errorTextColor">@color/color_dark_red</item>
+        <item name="colorOnPrimary">@color/label_dark_primary</item>
+        <item name="colorOnSecondary">@color/back_dark_secondary</item>
+        <item name="colorOnTertiary">@color/label_dark_tertiary</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/label_dark_disable</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
     </style>
 </resources>
