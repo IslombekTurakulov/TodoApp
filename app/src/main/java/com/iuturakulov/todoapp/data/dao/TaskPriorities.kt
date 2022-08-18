@@ -1,4 +1,4 @@
-package com.iuturakulov.todoapp.data
+package com.iuturakulov.todoapp.data.dao
 
 import android.content.Context
 import androidx.annotation.StringRes

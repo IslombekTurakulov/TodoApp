@@ -1,6 +1,6 @@
 package com.iuturakulov.todoapp.data.core
 
-import com.iuturakulov.todoapp.data.dao.ItemTasksEntityDao
+import com.iuturakulov.todoapp.data.dao.ItemTasksEntity
 import com.iuturakulov.todoapp.data.dao.TasksDao
 
 import android.content.Context
@@ -11,7 +11,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 
 @Database(
     entities = [
-        ItemTasksEntityDao::class
+        ItemTasksEntity::class
     ],
     version = 1,
     exportSchema = false
@@ -24,7 +24,7 @@ abstract class TodoItemsDB : RoomDatabase() {
             Room.databaseBuilder(
                 appContext,
                 TodoItemsDB::class.java,
-                "todo_tasks_database"
+                "tasks_database"
             )
                 .fallbackToDestructiveMigration()
                 .build()
