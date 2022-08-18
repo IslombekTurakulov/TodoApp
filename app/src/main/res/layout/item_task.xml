@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_5sdp"
                 android:ellipsize="end"
-                android:maxLines="1"
+                android:maxLines="3"
                 android:padding="@dimen/_5sdp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                 tools:text="Title of task" />

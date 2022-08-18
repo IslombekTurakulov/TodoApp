@@ -4,10 +4,10 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="errorTextColor">@color/color_light_red</item>
-        <item name="colorOnPrimary">@color/label_light_primary</item>
-        <item name="colorOnSecondary">@color/back_light_secondary</item>
-        <item name="colorOnTertiary">@color/label_light_tertiary</item>
-        <item name="android:textColorPrimaryDisableOnly">@color/label_light_disable</item>
+        <item name="colorOnPrimary">@color/label_dark_primary</item>
+        <item name="colorOnSecondary">@color/back_dark_secondary</item>
+        <item name="colorOnTertiary">@color/label_dark_tertiary</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/label_dark_disable</item>
     </style>
 
     <style name="Theme.TodoApp" parent="Base.Theme.TodoApp" />
