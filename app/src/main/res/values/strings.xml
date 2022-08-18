@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">TodoApp</string>
-    <string name="title_activity_add_task">AddTaskActivity</string>
+    <string name="title_activity_add_task" translatable="false">AddTaskActivity</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="first_fragment_label" translatable="false">First Fragment</string>
+    <string name="second_fragment_label" translatable="false">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="lorem_ipsum">
+    <string name="lorem_ipsum" translatable="false">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
         dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
@@ -43,8 +43,8 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
-    <string name="title_activity_task_info">TaskInfoActivity</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_task_info" translatable="false">TaskInfoActivity</string>
+    <string name="title_activity_main" translatable="false">MainActivity</string>
     <string name="action_search">Search</string>
     <string name="action_notifications">Notifications</string>
     <string name="placeholder_in_development">In development</string>
@@ -85,20 +85,20 @@
     <string name="details_fragment_error_delete">Failed to delete the task</string>
     <string name="details_fragment_button_done">Mark Completed</string>
     <string name="details_fragment_button_not_done">Mark as incomplete</string>
-    <string name="details_fragment_category_personal">Personal</string>
-    <string name="details_fragment_category_business">Business</string>
-    <string name="details_fragment_category_education">Education</string>
-    <string name="details_fragment_category_science">Science</string>
-    <string name="shared_element">sharedElement_</string>
-    <string name="notification_title">ToDoApp</string>
+    <string name="details_fragment_category_personal" translatable="false">Personal</string>
+    <string name="details_fragment_category_business" translatable="false">Business</string>
+    <string name="details_fragment_category_education" translatable="false">Education</string>
+    <string name="details_fragment_category_science" translatable="false">Science</string>
+    <string name="shared_element" translatable="false">sharedElement_</string>
+    <string name="notification_title" translatable="false">TodoApp</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="explore_fragment_label">Explore Fragment</string>
-    <string name="search_fragment_label">Search Fragment</string>
+    <string name="explore_fragment_label" translatable="false">Explore Fragment</string>
+    <string name="search_fragment_label" translatable="false">Search Fragment</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="fragment_title_delete_task">Delete</string>
     <string name="priority_of_task">Priority Of Task</string>
-    <string name="priority_low">LOW</string>
-    <string name="priority_empty">EMPTY</string>
-    <string name="priority_high">HIGH</string>
+    <string name="priority_low">Low</string>
+    <string name="priority_empty">Empty</string>
+    <string name="priority_high">High</string>
 </resources>
