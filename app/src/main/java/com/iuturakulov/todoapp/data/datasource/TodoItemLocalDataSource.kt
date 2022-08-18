@@ -7,7 +7,7 @@ import com.iuturakulov.todoapp.extensions.Result
 interface TodoItemLocalDataSource {
     suspend fun getById(id: Long): ItemTasksEntityDao?
     suspend fun getAll():List<ItemTasksEntityDao?>?
-    suspend fun insert(item: ItemTasksEntityDao)
+    suspend fun insert(item: ItemTasksEntityDao) : Long
     suspend fun update(item: ItemTasksEntityDao)
     suspend fun delete(item: ItemTasksEntityDao)
     suspend fun deleteAll()

@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
-import com.iuturakulov.todoapp.data.TaskPriority
+import com.iuturakulov.todoapp.data.TaskPriorities
 import com.iuturakulov.todoapp.model.TimeTodo
 import com.iuturakulov.todoapp.model.TodoItem
 
@@ -24,7 +24,7 @@ class ItemTasksEntityDao(
     @ColumnInfo(name = COLUMN_TASK_DESCRIPTION)
     val description: TodoItem.DescriptionTask,
     @ColumnInfo(name = COLUMN_TASK_PRIORITY)
-    val priority: TaskPriority,
+    val priority: TaskPriorities,
     @ColumnInfo(name = COLUMN_TASK_DONE)
     val isDone: Boolean,
     @ColumnInfo(name = COLUMN_TASK_DATE)

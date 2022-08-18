@@ -1,35 +1,40 @@
 package com.iuturakulov.todoapp.model
 
-import com.iuturakulov.todoapp.data.TaskPriority
+import com.iuturakulov.todoapp.data.TaskPriorities
 
 data class TodoItem(
     val id: Long,
     val title: TitleTask,
     val description: DescriptionTask,
-    val taskPriority: TaskPriority,
+    val taskPriority: TaskPriorities,
     val isDone: Boolean,
     val timeTodo: TimeTodo
 ) {
 
     @JvmInline
     value class TitleTask(val title: String) {
-        fun validate(): Boolean {
-            return if ((value != null)
-                && (value.isNotBlank())) {
-                Title(value)
-            } else {
-                null
+        companion object {
+            fun validate(title: String?): TitleTask? {
+                return if ((title != null)
+                    && (title.isNotBlank())
+                ) {
+                    TitleTask(title)
+                } else {
+                    null
+                }
             }
         }
     }
 
     @JvmInline
     value class DescriptionTask(val description: String) {
-        fun validate(): Boolean {
-            return if (description != null && description.isNotEmpty()) {
-                true
-            } else {
-                false
+        companion object {
+            fun validate(description: String?): TitleTask? {
+                return if (description != null) {
+                    TitleTask(description)
+                } else {
+                    null
+                }
             }
         }
     }

@@ -5,17 +5,17 @@ import androidx.annotation.StringRes
 import com.iuturakulov.todoapp.R
 
 enum class
-TaskPriority(@StringRes val title: Int) {
+TaskPriorities(@StringRes val value: Int) {
     LOW(R.string.priority_low),
     EMPTY(R.string.priority_empty),
     HIGH(R.string.priority_high);
 
 
     companion object {
-        fun String.toPriority(context: Context): TaskPriority {
+        fun String.toPriority(context: Context): TaskPriorities {
             return when (this) {
-                context.getString(LOW.title) -> LOW
-                context.getString(HIGH.title) -> HIGH
+                context.getString(LOW.value) -> LOW
+                context.getString(HIGH.value) -> HIGH
                 else -> EMPTY
             }
         }
