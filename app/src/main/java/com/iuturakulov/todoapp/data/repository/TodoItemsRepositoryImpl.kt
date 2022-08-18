@@ -68,10 +68,20 @@ class TodoItemsRepositoryImpl @Inject constructor(private val localDataSource: T
     }
 
     override suspend fun updateTodoItem(TodoItem: TodoItem): Result<Int, Throwable?> {
-        TODO("Not yet implemented")
+        val request = localDataSource.update(TodoItem.toEntity())
+        return if (request != 0) {
+            Result.Success(request)
+        } else {
+            Result.Error(null)
+        }
     }
 
     override suspend fun deleteTodoItem(TodoItem: TodoItem): Result<Int, Throwable?> {
-        TODO("Not yet implemented")
+        val request = localDataSource.delete(TodoItem.toEntity())
+        return if (request != 0) {
+            Result.Success(request)
+        } else {
+            Result.Error(null)
+        }
     }
 }

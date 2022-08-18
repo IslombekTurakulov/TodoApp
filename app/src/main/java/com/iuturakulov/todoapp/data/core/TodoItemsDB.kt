@@ -24,7 +24,7 @@ abstract class TodoItemsDB : RoomDatabase() {
             Room.databaseBuilder(
                 appContext,
                 TodoItemsDB::class.java,
-                "tasks_database"
+                "todo_tasks_database"
             )
                 .fallbackToDestructiveMigration()
                 .build()

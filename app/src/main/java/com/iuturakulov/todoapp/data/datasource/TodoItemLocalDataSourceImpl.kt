@@ -3,7 +3,6 @@ package com.iuturakulov.todoapp.data.datasource
 import com.iuturakulov.todoapp.data.dao.ItemTasksEntityDao
 import com.iuturakulov.todoapp.data.dao.TaskTitleEntityDao
 import com.iuturakulov.todoapp.data.dao.TasksDao
-import com.iuturakulov.todoapp.extensions.Result
 import javax.inject.Inject
 
 class TodoItemLocalDataSourceImpl @Inject constructor(private val tasksDao: TasksDao) :
@@ -16,16 +15,16 @@ class TodoItemLocalDataSourceImpl @Inject constructor(private val tasksDao: Task
         return tasksDao.getAll()
     }
 
-    override suspend fun insert(item: ItemTasksEntityDao) : Long {
-        tasksDao.insert(item)
+    override suspend fun insert(item: ItemTasksEntityDao): Long {
+        return tasksDao.insert(item)
     }
 
-    override suspend fun update(item: ItemTasksEntityDao) {
-        tasksDao.update(item)
+    override suspend fun update(item: ItemTasksEntityDao): Int {
+        return tasksDao.update(item)
     }
 
-    override suspend fun delete(item: ItemTasksEntityDao) {
-        tasksDao.delete(item)
+    override suspend fun delete(item: ItemTasksEntityDao): Int {
+        return tasksDao.delete(item)
     }
 
     override suspend fun deleteAll() {
