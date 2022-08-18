@@ -1,14 +1,17 @@
 package com.iuturakulov.todoapp.data.repository
 
+import com.iuturakulov.todoapp.data.TaskPriority
 import com.iuturakulov.todoapp.model.TodoItem
+import com.iuturakulov.todoapp.model.TodoItemId
+import com.iuturakulov.todoapp.extensions.Result
 
 interface TodoItemsRepository {
-    suspend fun getTask(id: Long): Result<Task, Throwable?>
-    suspend fun getCategories(): Result<List<Category>, Throwable?>
-    suspend fun getTasks(): Result<List<Task>, Throwable?>
-    suspend fun getAllTitlesAndIds(): Result<List<TaskTitleId>, Throwable?>
-    suspend fun searchTasks(query: String): Result<List<Task>, Throwable?>
-    suspend fun insertTask(task: Task): Result<Long, Throwable?>
-    suspend fun updateTask(task: Task): Result<Int, Throwable?>
-    suspend fun deleteTask(task: Task): Result<Int, Throwable?>
+    suspend fun getTodoItem(id: Long): Result<TodoItem, Throwable?>
+    suspend fun getPriorities(): Result<List<TaskPriority>, Throwable?>
+    suspend fun getTodoItems(): Result<List<TodoItem>, Throwable?>
+    suspend fun getAllTitlesAndIds(): Result<List<TodoItemId>, Throwable?>
+    suspend fun searchTodoItems(query: String): Result<List<TodoItem>, Throwable?>
+    suspend fun insertTodoItem(TodoItem: TodoItem): Result<Long, Throwable?>
+    suspend fun updateTodoItem(TodoItem: TodoItem): Result<Int, Throwable?>
+    suspend fun deleteTodoItem(TodoItem: TodoItem): Result<Int, Throwable?>
 }
