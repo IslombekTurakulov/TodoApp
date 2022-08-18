@@ -18,7 +18,7 @@ import com.iuturakulov.todoapp.model.TodoItem
 class ItemTasksEntityDao(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = COLUMN_TASK_ID)
-    val id: Int,
+    val id: Long,
     @ColumnInfo(name = COLUMN_TASK_TITLE)
     val title: TodoItem.TitleTask,
     @ColumnInfo(name = COLUMN_TASK_DESCRIPTION)

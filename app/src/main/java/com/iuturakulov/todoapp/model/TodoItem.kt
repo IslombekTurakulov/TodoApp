@@ -3,7 +3,7 @@ package com.iuturakulov.todoapp.model
 import com.iuturakulov.todoapp.data.TaskPriority
 
 data class TodoItem(
-    val id: String,
+    val id: Long,
     val title: TitleTask,
     val description: DescriptionTask,
     val taskPriority: TaskPriority,
@@ -14,10 +14,11 @@ data class TodoItem(
     @JvmInline
     value class TitleTask(val title: String) {
         fun validate(): Boolean {
-            return if (title != null && title.isNotEmpty()) {
-                true
+            return if ((value != null)
+                && (value.isNotBlank())) {
+                Title(value)
             } else {
-                false
+                null
             }
         }
     }
