@@ -37,7 +37,7 @@ class ExploreViewModel @Inject constructor(
     }
 
     private suspend fun handleTasks(): TasksResult {
-        return when (val tasks = tasksRepository.getAllTasks()) {
+        return when (val tasks = tasksRepository.getTasks()) {
             is Result.Error -> TasksResult.ErrorResult(IllegalArgumentException("Tasks not found"))
             is Result.Success -> if (tasks.result.isEmpty()) {
                 TasksResult.EmptyResult

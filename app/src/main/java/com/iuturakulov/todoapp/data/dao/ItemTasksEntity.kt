@@ -8,7 +8,7 @@ import javax.inject.Inject
 @Entity(
     tableName = ItemTasksEntity.TABLE_NAME,
     indices = [Index(
-        value = [ItemTasksEntity.COLUMN_TASK_TITLE],
+        value = [ItemTasksEntity.COLUMN_TASK_TITLE, ItemTasksEntity.COLUMN_TASK_PRIORITY],
         unique = true
     )]
 )
@@ -16,21 +16,30 @@ data class ItemTasksEntity(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = COLUMN_TASK_ID)
     val id: Long,
+
     @ColumnInfo(name = COLUMN_TASK_TITLE)
     val title: TodoItem.TitleTask,
+
     @ColumnInfo(name = COLUMN_TASK_DESCRIPTION)
     val description: TodoItem.DescriptionTask,
+
     @ColumnInfo(name = COLUMN_TASK_PRIORITY)
     val priority: TaskPriorities,
+
     @ColumnInfo(name = COLUMN_TASK_DONE)
-    val isDone: Boolean,
+    val done: Boolean,
+
     @ColumnInfo(name = COLUMN_TASK_DATE)
-    val deadline: Long,
+    val deadline: Long? = null,
+
     @ColumnInfo(name = COLUMN_TASK_CREATED)
     val created: Long,
+
     @ColumnInfo(name = COLUMN_TASK_UPDATED)
-    val updated: Long,
+    val updated: Long? = null,
 ) {
+
+    constructor(): this(0, TodoItem.TitleTask(""), TodoItem.DescriptionTask(""), TaskPriorities.LOW, false, null, 0, null)
 
     companion object {
         const val TABLE_NAME = "tasks"

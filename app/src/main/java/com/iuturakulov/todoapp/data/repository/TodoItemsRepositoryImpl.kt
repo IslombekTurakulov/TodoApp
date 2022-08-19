@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 class TodoItemsRepositoryImpl @Inject constructor(private val localDataSource: TodoItemLocalDataSource) :
     TodoItemsRepository {
-    override suspend fun getById(id: Long): Result<TodoItem, Throwable?> {
+    override suspend fun getTask(id: Long): Result<TodoItem, Throwable?> {
         val task = localDataSource.getById(id)
         return if (task != null) {
             Result.Success(task.toModel())
@@ -30,7 +30,7 @@ class TodoItemsRepositoryImpl @Inject constructor(private val localDataSource: T
         }
     }
 
-    override suspend fun getAllTasks(): Result<List<TodoItem>, Throwable?> {
+    override suspend fun getTasks(): Result<List<TodoItem>, Throwable?> {
         val todoItems = localDataSource.getAll()
         return if (todoItems != null) {
             Result.Success(todoItems.map { it?.toModel()!! })
@@ -57,18 +57,17 @@ class TodoItemsRepositoryImpl @Inject constructor(private val localDataSource: T
         }
     }
 
-    override suspend fun insertTask(task: TodoItem): Result<Long, Throwable?> {
-        val request = localDataSource.insert(task.toEntity())
-        val result = if (request != -1L) {
+    override suspend fun insertTask(todoItem: TodoItem): Result<Long, Throwable?> {
+        val request = localDataSource.insert(todoItem.toEntity())
+        return if (request != -1L) {
             Result.Success(request)
         } else {
             Result.Error(null)
         }
-        return result
     }
 
-    override suspend fun updateTask(TodoItem: TodoItem): Result<Int, Throwable?> {
-        val request = localDataSource.update(TodoItem.toEntity())
+    override suspend fun updateTask(todoItem: TodoItem): Result<Int, Throwable?> {
+        val request = localDataSource.update(todoItem.toEntity())
         return if (request != 0) {
             Result.Success(request)
         } else {
@@ -76,8 +75,8 @@ class TodoItemsRepositoryImpl @Inject constructor(private val localDataSource: T
         }
     }
 
-    override suspend fun deleteTask(TodoItem: TodoItem): Result<Int, Throwable?> {
-        val request = localDataSource.delete(TodoItem.toEntity())
+    override suspend fun deleteTask(todoItem: TodoItem): Result<Int, Throwable?> {
+        val request = localDataSource.delete(todoItem.toEntity())
         return if (request != 0) {
             Result.Success(request)
         } else {

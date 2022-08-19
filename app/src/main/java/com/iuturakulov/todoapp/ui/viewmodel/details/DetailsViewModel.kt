@@ -59,7 +59,7 @@ class DetailsViewModel @Inject constructor(
     }
 
     private suspend fun handleTask(): FetchDetailsState {
-        return when (val result = TodoItemsRepository.getById(taskId)) {
+        return when (val result = TodoItemsRepository.getTask(taskId)) {
             is Error -> FetchDetailsState.Error(IllegalArgumentException("Task not found"))
             is Success -> {
                 initialTask = result.result

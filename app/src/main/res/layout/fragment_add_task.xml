@@ -21,9 +21,9 @@
                 android:id="@+id/toolBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+                app:titleCentered="true"
                 app:title="@string/add_fragment_creating_task"
-                app:titleCentered="true" />
+                app:navigationIcon="@drawable/ic_baseline_arrow_back_24"/>
 
             <com.google.android.material.progressindicator.LinearProgressIndicator
                 android:id="@+id/add_indicator"
@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:indeterminate="true"
                 android:visibility="gone"
-                app:trackCornerRadius="5dp" />
+                app:trackCornerRadius="5dp"/>
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -47,8 +47,8 @@
                 android:paddingBottom="16dp">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/title_inputLayout"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:id="@+id/title_inputLayout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
@@ -66,14 +66,13 @@
                         android:ellipsize="end"
                         android:inputType="text"
                         android:maxLength="30"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <!-- Priority -->
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/dropdownInputLayout"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:id="@+id/dropdownInputLayout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
@@ -90,18 +89,18 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/date_button"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:id="@+id/date_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp"
                     android:text="@string/add_fragment_date_specify"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/dropdownInputLayout" />
+                    app:layout_constraintTop_toBottomOf="@id/dropdownInputLayout"/>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/description_inputLayout"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:id="@+id/description_inputLayout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
@@ -119,7 +118,7 @@
                         android:ellipsize="end"
                         android:inputType="textMultiLine"
                         android:maxLength="500"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -127,9 +126,9 @@
                     android:layout_width="0dp"
                     android:layout_height="64dp"
                     android:layout_marginTop="24dp"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/description_inputLayout" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/description_inputLayout"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -142,11 +141,11 @@
         style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:padding="16dp"
-        android:text="@string/add_fragment_new_task" />
+        android:text="@string/add_fragment_new_task"
+        android:layout_gravity="bottom"/>
 
 </androidx.cardview.widget.CardView>

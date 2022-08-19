@@ -8,9 +8,9 @@ data class TodoItem(
     val description: DescriptionTask,
     val taskPriority: TaskPriorities,
     val isDone: Boolean,
-    val deadline: Long = 0,
+    val deadline: Long? = null,
     val created: Long,
-    val updated: Long = 0
+    val updated: Long? = null
 ) {
 
     @JvmInline
