@@ -2,6 +2,10 @@ package com.iuturakulov.todoapp.data.dao
 
 import androidx.room.*
 import androidx.room.Dao
+import com.iuturakulov.todoapp.extensions.Constants.COLUMN_TASK_DESCRIPTION
+import com.iuturakulov.todoapp.extensions.Constants.COLUMN_TASK_ID
+import com.iuturakulov.todoapp.extensions.Constants.COLUMN_TASK_TITLE
+import com.iuturakulov.todoapp.extensions.Constants.TABLE_NAME
 
 @Dao
 interface TasksDao {
@@ -9,8 +13,8 @@ interface TasksDao {
     @Query(
         value = """
                 SELECT *
-                FROM ${ItemTasksEntity.TABLE_NAME}
-                WHERE ${ItemTasksEntity.COLUMN_TASK_ID}=:id
+                FROM $TABLE_NAME
+                WHERE ${COLUMN_TASK_ID}=:id
             """
     )
     suspend fun getById(id: Long): ItemTasksEntity?
@@ -18,9 +22,9 @@ interface TasksDao {
     @Query(
         """
         SELECT *
-        FROM ${ItemTasksEntity.TABLE_NAME}
-        WHERE ${ItemTasksEntity.COLUMN_TASK_TITLE} LIKE :query OR
-        ${ItemTasksEntity.COLUMN_TASK_DESCRIPTION} LIKE :query
+        FROM $TABLE_NAME
+        WHERE $COLUMN_TASK_TITLE LIKE :query OR
+        $COLUMN_TASK_DESCRIPTION LIKE :query
     """
     )
     suspend fun searchTasks(query: String): List<ItemTasksEntity>?
@@ -28,15 +32,15 @@ interface TasksDao {
     @Query(
         """
         SELECT *
-        FROM ${ItemTasksEntity.TABLE_NAME}
+        FROM $TABLE_NAME
     """
     )
     suspend fun getAll(): List<ItemTasksEntity?>?
 
     @Query(
         """
-        SELECT ${ItemTasksEntity.COLUMN_TASK_ID}, ${ItemTasksEntity.COLUMN_TASK_TITLE}
-        FROM ${ItemTasksEntity.TABLE_NAME}
+        SELECT ${COLUMN_TASK_ID}, $COLUMN_TASK_TITLE
+        FROM $TABLE_NAME
     """
     )
     suspend fun getAllTitlesAndIds(): List<TaskTitleEntityDao>?
@@ -52,7 +56,7 @@ interface TasksDao {
     suspend fun update(task: ItemTasksEntity): Int
 
     @Transaction
-    @Query("DELETE FROM ${ItemTasksEntity.TABLE_NAME}")
+    @Query("DELETE FROM $TABLE_NAME")
     suspend fun deleteAll()
 
     @Delete

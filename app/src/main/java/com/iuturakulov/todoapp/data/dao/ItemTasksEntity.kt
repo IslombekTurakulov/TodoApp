@@ -1,18 +1,28 @@
 package com.iuturakulov.todoapp.data.dao
 
 import androidx.room.*
+import com.iuturakulov.todoapp.extensions.Constants.COLUMN_TASK_CREATED
+import com.iuturakulov.todoapp.extensions.Constants.COLUMN_TASK_DATE
+import com.iuturakulov.todoapp.extensions.Constants.COLUMN_TASK_DESCRIPTION
+import com.iuturakulov.todoapp.extensions.Constants.COLUMN_TASK_DONE
+import com.iuturakulov.todoapp.extensions.Constants.COLUMN_TASK_ID
+import com.iuturakulov.todoapp.extensions.Constants.COLUMN_TASK_PRIORITY
+import com.iuturakulov.todoapp.extensions.Constants.COLUMN_TASK_TITLE
+import com.iuturakulov.todoapp.extensions.Constants.COLUMN_TASK_UPDATED
+import com.iuturakulov.todoapp.extensions.Constants.TABLE_NAME
 import com.iuturakulov.todoapp.extensions.EnumConverter
 import com.iuturakulov.todoapp.model.TodoItem
 import javax.inject.Inject
 
 @Entity(
-    tableName = ItemTasksEntity.TABLE_NAME,
+    tableName = TABLE_NAME,
     indices = [Index(
-        value = [ItemTasksEntity.COLUMN_TASK_TITLE, ItemTasksEntity.COLUMN_TASK_PRIORITY],
+        value = [COLUMN_TASK_TITLE, COLUMN_TASK_PRIORITY],
         unique = true
     )]
 )
-data class ItemTasksEntity(
+@TypeConverters(EnumConverter::class)
+data class ItemTasksEntity constructor(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = COLUMN_TASK_ID)
     val id: Long,
@@ -37,19 +47,4 @@ data class ItemTasksEntity(
 
     @ColumnInfo(name = COLUMN_TASK_UPDATED)
     val updated: Long? = null,
-) {
-
-    constructor(): this(0, TodoItem.TitleTask(""), TodoItem.DescriptionTask(""), TaskPriorities.LOW, false, null, 0, null)
-
-    companion object {
-        const val TABLE_NAME = "tasks"
-        const val COLUMN_TASK_TITLE = "title"
-        const val COLUMN_TASK_DESCRIPTION = "description"
-        const val COLUMN_TASK_PRIORITY = "priority"
-        const val COLUMN_TASK_ID = "task_id"
-        const val COLUMN_TASK_DONE = "task_done"
-        const val COLUMN_TASK_DATE = "task_date"
-        const val COLUMN_TASK_CREATED = "task_created"
-        const val COLUMN_TASK_UPDATED = "task_updated"
-    }
-}
+)

@@ -5,7 +5,6 @@ import androidx.annotation.StringRes
 import androidx.room.Entity
 import com.iuturakulov.todoapp.R
 
-@Entity
 enum class
 TaskPriorities(@StringRes val value: Int) {
     LOW(R.string.priority_low),
