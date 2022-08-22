@@ -11,8 +11,8 @@ import timber.log.Timber
 internal fun ItemTasksEntity.toModel(): TodoItem =
     TodoItem(
         id = this.id,
-        title = TodoItem.TitleTask(this.title.title),
-        description = TodoItem.DescriptionTask(this.description.description),
+        title = TodoItem.TitleTask(this.title),
+        description = TodoItem.DescriptionTask(this.description),
         taskPriority = this.priority,
         isDone = this.done,
         deadline = this.deadline,
@@ -23,8 +23,8 @@ internal fun ItemTasksEntity.toModel(): TodoItem =
 internal fun TodoItem.toEntity(): ItemTasksEntity =
     ItemTasksEntity(
         id = this.id,
-        title = TodoItem.TitleTask(this.title.title),
-        description = TodoItem.DescriptionTask(this.description.description),
+        title = this.title.value,
+        description = this.description.value,
         priority = this.taskPriority,
         done = this.isDone,
         deadline = this.deadline ?: 0,

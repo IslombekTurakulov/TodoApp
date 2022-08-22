@@ -2,7 +2,6 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'kotlin-android-extensions'
     id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs.kotlin'
 }
@@ -43,9 +42,9 @@ android {
         viewBinding true
     }
     kotlinOptions {
-        freeCompilerArgs += "-Xopt-in=kotlinx.coroutines.FlowPreview"
-        freeCompilerArgs += "-Xopt-in=kotlinx.coroutines.ExperimentalCoroutinesApi"
-        freeCompilerArgs += "-Xopt-in=kotlin.contracts.ExperimentalContracts"
+        freeCompilerArgs += "-opt-in=kotlinx.coroutines.FlowPreview"
+        freeCompilerArgs += "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi"
+        freeCompilerArgs += "-opt-in=kotlin.contracts.ExperimentalContracts"
         freeCompilerArgs += "-opt-in=kotlin.RequiresOptIn"
     }
 }

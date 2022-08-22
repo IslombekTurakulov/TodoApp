@@ -87,7 +87,7 @@ class AddViewModel @Inject constructor(
     private fun checkTitleNotUnique(title: TodoItem.TitleTask): Boolean {
         val titles = _titles.value
         titles.forEach {
-            if (title.title == it.title.title) {
+            if (title.value == it.title.value) {
                 return true
             }
         }

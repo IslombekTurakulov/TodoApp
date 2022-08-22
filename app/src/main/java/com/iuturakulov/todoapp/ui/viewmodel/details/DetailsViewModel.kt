@@ -139,7 +139,7 @@ class DetailsViewModel @Inject constructor(
         if (_titles.value.isEmpty()) return true
         val titles = _titles.value
         titles.forEach {
-            if (title.title == it.title.title && initialTask?.id != it.id) {
+            if (title.value == it.title.value && initialTask?.id != it.id) {
                 return true
             }
         }
@@ -177,8 +177,8 @@ class DetailsViewModel @Inject constructor(
     ): Boolean {
         when {
             this == null -> return false
-            this.title.title != title.title -> return false
-            this.description.description != description.description -> return false
+            this.title.value != title.value -> return false
+            this.description.value != description.value -> return false
             this.taskPriority != category -> return false
             this.isDone != done -> return false
             this.created != date -> return false

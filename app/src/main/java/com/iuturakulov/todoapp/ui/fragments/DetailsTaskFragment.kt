@@ -115,8 +115,8 @@ class DetailsTaskFragment : Fragment() {
     private fun renderResult(state: FetchDetailsState.Result) {
         showLoading(show = false)
 
-        binding.titleEditText.setText(state.task.title.title)
-        binding.descriptionEditText.setText(state.task.description.description)
+        binding.titleEditText.setText(state.task.title.value)
+        binding.descriptionEditText.setText(state.task.description.value)
         binding.textField.setText(getString(state.task.taskPriority.value), false)
         (binding.textField as? AutoCompleteTextView)?.setAdapter(categoriesAdapter)
 

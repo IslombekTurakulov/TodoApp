@@ -14,7 +14,7 @@ class TasksViewHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(context: Context, task: TodoItem, onTaskClick: (Long, View) -> Unit) {
-        binding.titleTextView.text = task.title.title
+        binding.titleTextView.text = task.title.value
 
         val dateString = DateFormat.format("dd/MM/yyyy HH:mm", Date(task.created))
         binding.dateTextView.text = dateString

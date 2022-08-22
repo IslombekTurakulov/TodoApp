@@ -14,7 +14,7 @@ data class TodoItem(
 ) {
 
     @JvmInline
-    value class TitleTask(val title: String) {
+    value class TitleTask(val value: String) {
         companion object {
             fun validate(title: String?): TitleTask? {
                 return if (title != null
@@ -29,7 +29,7 @@ data class TodoItem(
     }
 
     @JvmInline
-    value class DescriptionTask(val description: String) {
+    value class DescriptionTask(val value: String) {
         companion object {
             fun validate(description: String?): TitleTask? {
                 return if (description != null) {

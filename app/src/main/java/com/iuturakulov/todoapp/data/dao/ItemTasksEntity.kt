@@ -25,26 +25,26 @@ import javax.inject.Inject
 data class ItemTasksEntity constructor(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = COLUMN_TASK_ID)
-    val id: Long,
+    var id: Long,
 
     @ColumnInfo(name = COLUMN_TASK_TITLE)
-    val title: TodoItem.TitleTask,
+    var title: String,
 
     @ColumnInfo(name = COLUMN_TASK_DESCRIPTION)
-    val description: TodoItem.DescriptionTask,
+    var description: String,
 
     @ColumnInfo(name = COLUMN_TASK_PRIORITY)
-    val priority: TaskPriorities,
+    var priority: TaskPriorities,
 
     @ColumnInfo(name = COLUMN_TASK_DONE)
-    val done: Boolean,
+    var done: Boolean,
 
     @ColumnInfo(name = COLUMN_TASK_DATE)
-    val deadline: Long? = null,
+    var deadline: Long? = null,
 
     @ColumnInfo(name = COLUMN_TASK_CREATED)
-    val created: Long,
+    var created: Long,
 
     @ColumnInfo(name = COLUMN_TASK_UPDATED)
-    val updated: Long? = null,
+    var updated: Long? = null,
 )
