@@ -15,10 +15,9 @@ class TasksViewHolder(
 
     fun bind(context: Context, task: TodoItem, onTaskClick: (Long, View) -> Unit) {
         binding.titleTextView.text = task.title.value
-
         val dateString = DateFormat.format("dd/MM/yyyy HH:mm", Date(task.created))
         binding.dateTextView.text = dateString
-
+        binding.priorityTextView.text = task.taskPriority.value.toString()
         itemView.transitionName = context.resources.getString(R.string.shared_element) + task.id
         setClickListener(onTaskClick, task)
     }

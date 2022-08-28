@@ -1,7 +1,7 @@
 package com.iuturakulov.todoapp.extensions
 
-import com.iuturakulov.todoapp.data.dao.TaskPriorities
 import com.iuturakulov.todoapp.data.dao.ItemTasksEntity
+import com.iuturakulov.todoapp.data.dao.TaskPriorities
 import com.iuturakulov.todoapp.data.dao.TaskTitleEntityDao
 import com.iuturakulov.todoapp.model.TaskPriority
 import com.iuturakulov.todoapp.model.TodoItem

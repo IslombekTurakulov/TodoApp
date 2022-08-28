@@ -5,11 +5,15 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.iuturakulov.todoapp.data.repository.TodoItemsRepository
-import com.iuturakulov.todoapp.extensions.Result.*
+import com.iuturakulov.todoapp.extensions.Result.Error
+import com.iuturakulov.todoapp.extensions.Result.Success
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.mapLatest
+import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.sample
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -51,7 +55,7 @@ class SearchViewModel @Inject constructor(
     }
 
     private suspend fun handleSearchTask(query: String): SearchResult {
-        return when(val tasksResult = tasksRepository.searchTasks(query)) {
+        return when (val tasksResult = tasksRepository.searchTasks(query)) {
             is Error -> SearchResult.ErrorResult(IllegalArgumentException("Search tasks from server database error!"))
             is Success -> if (tasksResult.result.isEmpty()) SearchResult.EmptyResult else
                 SearchResult.SuccessResult(tasksResult.result)

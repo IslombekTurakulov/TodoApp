@@ -2,7 +2,6 @@ package com.iuturakulov.todoapp.data.dao
 
 import android.content.Context
 import androidx.annotation.StringRes
-import androidx.room.Entity
 import com.iuturakulov.todoapp.R
 
 enum class

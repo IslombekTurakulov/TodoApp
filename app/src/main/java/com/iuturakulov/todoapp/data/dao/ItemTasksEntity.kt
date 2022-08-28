@@ -11,8 +11,6 @@ import com.iuturakulov.todoapp.extensions.Constants.COLUMN_TASK_TITLE
 import com.iuturakulov.todoapp.extensions.Constants.COLUMN_TASK_UPDATED
 import com.iuturakulov.todoapp.extensions.Constants.TABLE_NAME
 import com.iuturakulov.todoapp.extensions.EnumConverter
-import com.iuturakulov.todoapp.model.TodoItem
-import javax.inject.Inject
 
 @Entity(
     tableName = TABLE_NAME,

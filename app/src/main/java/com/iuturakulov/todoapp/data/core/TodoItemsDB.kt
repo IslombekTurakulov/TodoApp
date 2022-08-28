@@ -1,14 +1,11 @@
 package com.iuturakulov.todoapp.data.core
 
-import com.iuturakulov.todoapp.data.dao.ItemTasksEntity
-import com.iuturakulov.todoapp.data.dao.TasksDao
-
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.iuturakulov.todoapp.data.dao.TaskPriorities
-import com.iuturakulov.todoapp.data.dao.TaskTitleEntityDao
+import com.iuturakulov.todoapp.data.dao.ItemTasksEntity
+import com.iuturakulov.todoapp.data.dao.TasksDao
 import dagger.hilt.android.qualifiers.ApplicationContext
 
 @Database(

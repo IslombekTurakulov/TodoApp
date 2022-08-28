@@ -7,7 +7,8 @@ import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.iuturakulov.todoapp.data.dao.TaskPriorities
 import com.iuturakulov.todoapp.data.repository.TodoItemsRepository
-import com.iuturakulov.todoapp.extensions.Result.*
+import com.iuturakulov.todoapp.extensions.Result.Error
+import com.iuturakulov.todoapp.extensions.Result.Success
 import com.iuturakulov.todoapp.model.TodoItem
 import com.iuturakulov.todoapp.model.TodoItemId
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -186,7 +187,7 @@ class DetailsViewModel @Inject constructor(
         return true
     }
 
-    fun deleteTask(context: Context) {
+    fun deleteTask() {
         viewModelScope.launch {
             when (TodoItemsRepository.deleteTask(initialTask!!)) {
                 is Error -> _deleteState.value = DeleteState.Error

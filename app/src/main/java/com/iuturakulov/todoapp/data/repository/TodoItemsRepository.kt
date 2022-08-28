@@ -1,9 +1,9 @@
 package com.iuturakulov.todoapp.data.repository
 
-import com.iuturakulov.todoapp.model.TodoItem
-import com.iuturakulov.todoapp.model.TodoItemId
 import com.iuturakulov.todoapp.extensions.Result
 import com.iuturakulov.todoapp.model.TaskPriority
+import com.iuturakulov.todoapp.model.TodoItem
+import com.iuturakulov.todoapp.model.TodoItemId
 
 interface TodoItemsRepository {
     suspend fun getTask(id: Long): Result<TodoItem, Throwable?>

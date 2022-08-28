@@ -1,13 +1,13 @@
 package com.iuturakulov.todoapp.ui.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.appcompat.widget.ListPopupWindow
 import androidx.core.view.doOnPreDraw
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
@@ -74,7 +74,8 @@ class ExploreTasksFragment : Fragment() {
                     reenterTransition = MaterialSharedAxis(MaterialSharedAxis.Z, false).apply {
                         duration = 500
                     }
-                    val directions = ExploreTasksFragmentDirections.actionExploreFragmentToSearchFragment()
+                    val directions =
+                        ExploreTasksFragmentDirections.actionExploreFragmentToSearchFragment()
                     findNavController().safeNavigate(directions)
                     true
                 }
@@ -155,6 +156,7 @@ class ExploreTasksFragment : Fragment() {
         val directions = ExploreTasksFragmentDirections.actionExploreFragmentToDetailsFragment(id)
         findNavController().safeNavigate(directions, extras)
     }
+
     private fun showTasksMenu(v: View) {
         val listPopupWindow = ListPopupWindow(
             requireContext(),

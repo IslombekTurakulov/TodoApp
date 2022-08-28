@@ -3,7 +3,6 @@ package com.iuturakulov.todoapp.ui.fragments
 import android.graphics.Color
 import android.os.Bundle
 import android.text.format.DateFormat
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,10 +11,10 @@ import android.widget.AutoCompleteTextView
 import androidx.activity.addCallback
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.iuturakulov.todoapp.ui.viewmodel.details.UpdateState
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.timepicker.MaterialTimePicker
@@ -30,6 +29,7 @@ import com.iuturakulov.todoapp.extensions.showSnackbar
 import com.iuturakulov.todoapp.ui.viewmodel.details.DeleteState
 import com.iuturakulov.todoapp.ui.viewmodel.details.DetailsViewModel
 import com.iuturakulov.todoapp.ui.viewmodel.details.FetchDetailsState
+import com.iuturakulov.todoapp.ui.viewmodel.details.UpdateState
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 import java.util.*
@@ -66,7 +66,7 @@ class DetailsTaskFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentDetailsTaskBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -250,7 +250,7 @@ class DetailsTaskFragment : Fragment() {
                 dialog.dismiss()
             }
             setPositiveButton(R.string.details_fragment_dialog_delete_positive_button) { dialog, _ ->
-                viewModel.deleteTask(requireContext())
+                viewModel.deleteTask()
                 dialog.dismiss()
             }
         }

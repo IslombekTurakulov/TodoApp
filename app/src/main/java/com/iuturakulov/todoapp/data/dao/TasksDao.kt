@@ -1,7 +1,6 @@
 package com.iuturakulov.todoapp.data.dao
 
 import androidx.room.*
-import androidx.room.Dao
 import com.iuturakulov.todoapp.extensions.Constants.COLUMN_TASK_DESCRIPTION
 import com.iuturakulov.todoapp.extensions.Constants.COLUMN_TASK_ID
 import com.iuturakulov.todoapp.extensions.Constants.COLUMN_TASK_TITLE

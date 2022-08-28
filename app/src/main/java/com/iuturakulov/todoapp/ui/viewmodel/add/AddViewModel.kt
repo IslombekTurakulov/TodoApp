@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.iuturakulov.todoapp.data.dao.TaskPriorities
 import com.iuturakulov.todoapp.data.repository.TodoItemsRepository
-import com.iuturakulov.todoapp.extensions.*
+import com.iuturakulov.todoapp.extensions.Result
 import com.iuturakulov.todoapp.model.TodoItem
 import com.iuturakulov.todoapp.model.TodoItemId
 import dagger.hilt.android.lifecycle.HiltViewModel
